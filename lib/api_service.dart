@@ -2,8 +2,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-// String apikey = "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";
-String apikey = "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";
+
 
 class ApiServices {
   static var url = Uri.https("api.openai.com", "/v1/completions");
@@ -14,7 +13,7 @@ class ApiServices {
     // 'Authorization': 'Bearer $apikey'
 
     'Content-Type': 'application/json',
-    "Authorization": "Bearer $apikey"
+    // "Authorization": "Bearer $apikey"
   };
   static sendMessage(String? message) async {
     var res = await http.post(url,
@@ -47,7 +46,7 @@ class ApiServices {
       url,
       headers: {
         'Content-Type': 'application/json',
-        "Authorization": "Bearer $apikey"
+        // "Authorization": "Bearer $apikey"
       },
       body: json.encode({
         "model": "text-davinci-003",
