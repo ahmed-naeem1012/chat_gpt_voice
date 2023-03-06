@@ -187,7 +187,9 @@ class _SpeechscreenState extends State<Speechscreen> {
               style: TextStyle(
                   color: type == Chat_MessageType.bot ? textcolor : chatbgColor,
                   fontSize: 15,
-                  fontWeight: type==Chat_MessageType.bot ? FontWeight.w600:FontWeight.w400),
+                  fontWeight: type == Chat_MessageType.bot
+                      ? FontWeight.w600
+                      : FontWeight.w400),
             ),
           ),
         ),
